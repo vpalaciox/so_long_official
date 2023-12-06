@@ -6,7 +6,7 @@
 /*   By: vpalacio <vanessajoypalacio@icloud.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 15:06:40 by vpalacio          #+#    #+#             */
-/*   Updated: 2023/12/06 16:24:11 by vpalacio         ###   ########.fr       */
+/*   Updated: 2023/12/06 17:05:51 by vpalacio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ void	check_args(int argc)
 {
 	if (argc != 2)
 		exit(write(1, "Error\nargc != 2", 15) - 14);
+		
 }
 
 void	check_ber(char *file)
