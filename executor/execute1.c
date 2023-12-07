@@ -6,7 +6,7 @@
 /*   By: vpalacio <vanessajoypalacio@icloud.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/05 10:41:35 by vpalacio          #+#    #+#             */
-/*   Updated: 2023/12/06 13:38:22 by vpalacio         ###   ########.fr       */
+/*   Updated: 2023/12/07 18:52:32 by vpalacio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,6 @@ void	draw_map(t_game *game)
 	int	w;
 
 	h = -1;
-	//printf("in draw: wid:%d hei:%d\n", game->width, game->height);
 	while (++h < game->height)
 	{
 		w = -1;
@@ -52,15 +51,4 @@ void	draw_map(t_game *game)
 				ft_background(game, game->image.player, w, h);
 		}
 	}
-	// h= -1;
-	// w= 0;
-	// while(++h< game->height)
-	// {
-	// 	w = -1;
-	// 	while(++w < game->width)
-	// 	{
-	// 		printf("%c ", game->map[h][w]);
-	// 	}
-	// 	printf("\n");
-	// }
 }

@@ -6,7 +6,7 @@
 /*   By: vpalacio <vanessajoypalacio@icloud.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/05 10:15:31 by vpalacio          #+#    #+#             */
-/*   Updated: 2023/12/06 16:49:35 by vpalacio         ###   ########.fr       */
+/*   Updated: 2023/12/07 18:51:57 by vpalacio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,10 @@ void	check_walls(t_game *game)
 	vertical = check_vertical_wall(game);
 	horizontal = inspect_wall(game);
 	if (!vertical || !horizontal)
+	{
+		free_map(game);
 		exit(write(1, "Error\nMissing walls", 19) * 0);
+	}
 	printf("dopo walls\n");
 }
 
@@ -55,7 +58,10 @@ void	check_cpe(t_game *game)
 		while (++w < game->width)
 		{
 			if (valid_char(game->map[h][w]) == 0)
+			{
+				free_map(game);
 				exit(write(1, "Error\nInvalid charsssssss", 19) * 0);
+			}
 			if (game->map[h][w] == 'P')
 			{
 				game->tot_player++;

@@ -6,7 +6,7 @@
 /*   By: vpalacio <vanessajoypalacio@icloud.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 15:06:25 by vpalacio          #+#    #+#             */
-/*   Updated: 2023/12/06 10:50:01 by vpalacio         ###   ########.fr       */
+/*   Updated: 2023/12/07 18:50:30 by vpalacio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,5 +72,6 @@ void	exit_player(void);
 void	check_walls(t_game *game);
 void	check_cpe(t_game *game);
 void	clean_exit(t_game *game, char *msg);
-
+void	init(t_game *game);
+void	free_map(t_game *game);
 #endif

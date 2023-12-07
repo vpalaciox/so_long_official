@@ -6,7 +6,7 @@
 /*   By: vpalacio <vanessajoypalacio@icloud.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 18:50:35 by vpalacio          #+#    #+#             */
-/*   Updated: 2023/12/05 10:44:43 by vpalacio         ###   ########.fr       */
+/*   Updated: 2023/12/07 17:37:19 by vpalacio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,8 @@ void	check_move(t_game *game, int y, int x)
 	{
 	//	printf("%d\n", game->tot_carrots);
 		if (game->tot_carrots == 0)
-			exit_player();
+			clean_exit(game, "YOU WIN!!!\n");
+			// exit_player();
 	}
 }
 

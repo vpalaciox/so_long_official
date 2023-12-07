@@ -6,7 +6,7 @@
 /*   By: vpalacio <vanessajoypalacio@icloud.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 15:06:40 by vpalacio          #+#    #+#             */
-/*   Updated: 2023/12/06 17:05:51 by vpalacio         ###   ########.fr       */
+/*   Updated: 2023/12/07 18:51:02 by vpalacio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ void	check_args(int argc)
 {
 	if (argc != 2)
 		exit(write(1, "Error\nargc != 2", 15) - 14);
-		
 }
 
 void	check_ber(char *file)
@@ -62,10 +61,11 @@ void	check_rectangular(t_game *game)
 	int len;
 	// game->height = 0;
 	if (game->map[0] == NULL)
-		exit(write(1, "Error\nEmpty map!\n", 18));
+		clean_exit(game, "Error\nEmpty map!\n");
+		// exit(write(1, "Error\nEmpty map!\n", 18));
 	i = 0;
 	game->width = (int)ft_strlen(game->map[0]) - 1;
-	while (game->map[i] && i < game->height)
+	while (i < game->height && game->map[i])
 	{
 		printf("GIRO>I%d\n", i);
 		printf("game->map[i]%s\n", game->map[i]);
@@ -74,7 +74,11 @@ void	check_rectangular(t_game *game)
 		printf("i:%d|len:%d|game->width:%d\n", i, len, game->width);
     //    printf("map[%d]:%d | width:%d\n", i, (int)ft_strlen(game->map[i]) - 1, game->width);
 		if ((len != game->width && i != game->height - 1) || (i == game->height - 1 && len != game->width - 1))
+		{
+			free_map(game);
 			exit(write(1, "Error\nNon-rectangular map!\n", 28));
+		}
+			
 		printf("dopo\n");
 		i++;
 	}
