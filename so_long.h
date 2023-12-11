@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   so_long.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vpalacio <vanessajoypalacio@icloud.com>    +#+  +:+       +#+        */
+/*   By: rdolzi <rdolzi@student.42roma.it>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 15:06:25 by vpalacio          #+#    #+#             */
-/*   Updated: 2023/12/11 16:22:15 by vpalacio         ###   ########.fr       */
+/*   Updated: 2023/12/11 18:04:22 by rdolzi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,11 +68,12 @@ int		inspect_wall(t_game *game);
 int		check_vertical_wall(t_game *game);
 char	*ft_strjoin1(char const *s1, char const *s2);
 char	*ft_itoa(int n);
-void	exit_player(void);
 void	check_walls(t_game *game);
 void	check_cpe(t_game *game);
-void	clean_exit(t_game *game, char *msg);
 void	init(t_game *game);
 void	free_map(t_game *game);
+void	simple_exit(t_game *game);
+void	clean_exit(t_game *game, char *msg);
+void	check_path(t_game *game);
 
 #endif

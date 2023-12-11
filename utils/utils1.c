@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils1.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vpalacio <vanessajoypalacio@icloud.com>    +#+  +:+       +#+        */
+/*   By: rdolzi <rdolzi@student.42roma.it>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/06 10:36:50 by vpalacio          #+#    #+#             */
-/*   Updated: 2023/12/11 16:10:13 by vpalacio         ###   ########.fr       */
+/*   Updated: 2023/12/11 18:03:16 by rdolzi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,9 +36,10 @@ char	*ft_strjoin1(char const *s1, char const *s2)
 	return (str);
 }
 
-void	exit_player(void)
+void	simple_exit(t_game *game)
 {
-	exit(write(1, "YOU WIN!!!\n", 11) * 0);
+	free_map(game);
+	exit(write(1, "Error\nInvalid chars", 19) * 0);
 }
 
 int	inspect_wall(t_game *game)

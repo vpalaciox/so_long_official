@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: vpalacio <vanessajoypalacio@icloud.com>    +#+  +:+       +#+         #
+#    By: rdolzi <rdolzi@student.42roma.it>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/08 17:29:38 by vpalacio          #+#    #+#              #
-#    Updated: 2023/12/11 16:32:59 by vpalacio         ###   ########.fr        #
+#    Updated: 2023/12/11 17:13:59 by rdolzi           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,6 +15,7 @@ CC			=	gcc -g
 SRCS		=	 main.c \
 				./checker/check_input.c \
 				./checker/check_input1.c \
+				./checker/check_input2.c \
 				./utils/utils.c \
 				./utils/utils1.c \
 				./parser/parse.c \

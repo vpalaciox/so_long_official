@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parse1.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vpalacio <vanessajoypalacio@icloud.com>    +#+  +:+       +#+        */
+/*   By: rdolzi <rdolzi@student.42roma.it>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 15:47:30 by vpalacio          #+#    #+#             */
-/*   Updated: 2023/12/11 15:59:21 by vpalacio         ###   ########.fr       */
+/*   Updated: 2023/12/11 18:08:22 by rdolzi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,10 +63,10 @@ void	set_map(t_game *game, char *file_name)
 	i = 0;
 	game->map = (char **)malloc(sizeof(char *) * (game->height));
 	if (game->map == NULL)
-		exit(write(1, "Error\n404 (game fail initialization)", 37) * 0);
+		exit(write(1, "Error\nmap initialization", 25) * 0);
 	fd = open(file_name, O_RDONLY);
 	if (fd == -1)
-		exit(write(1, "Error\n404 (game fail initialization)", 37) * 0);
+		exit(write(1, "Error\nmap initialization", 25) * 0);
 	str = get_next_line(fd);
 	while (str)
 	{

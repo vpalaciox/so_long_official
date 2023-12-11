@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check_input.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vpalacio <vanessajoypalacio@icloud.com>    +#+  +:+       +#+        */
+/*   By: rdolzi <rdolzi@student.42roma.it>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 15:06:40 by vpalacio          #+#    #+#             */
-/*   Updated: 2023/12/11 16:06:45 by vpalacio         ###   ########.fr       */
+/*   Updated: 2023/12/11 17:59:47 by rdolzi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,4 +82,5 @@ void	check(t_game *game, int argc, char **argv)
 	check_rectangular(game);
 	check_walls(game);
 	check_cpe(game);
+	check_path(game);
 }

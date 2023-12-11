@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check_input1.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vpalacio <vanessajoypalacio@icloud.com>    +#+  +:+       +#+        */
+/*   By: rdolzi <rdolzi@student.42roma.it>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/05 10:15:31 by vpalacio          #+#    #+#             */
-/*   Updated: 2023/12/11 16:14:51 by vpalacio         ###   ########.fr       */
+/*   Updated: 2023/12/11 18:05:20 by rdolzi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,13 @@ void	check_count(t_game *game)
 		exit(write(1, "Error\nInvalid chars", 19) * 0);
 }
 
+void	set_player(t_game *game, int w, int h)
+{
+	game->tot_player++;
+	game->px = w;
+	game->py = h;
+}
+
 void	check_cpe(t_game *game)
 {
 	int	h;
@@ -54,16 +61,9 @@ void	check_cpe(t_game *game)
 		while (++w < game->width)
 		{
 			if (valid_char(game->map[h][w]) == 0)
-			{
-				free_map(game);
-				exit(write(1, "Error\nInvalid chars", 19) * 0);
-			}
+				simple_exit(game);
 			if (game->map[h][w] == 'P')
-			{
-				game->tot_player++;
-				game->px = w;
-				game->py = h;
-			}
+				set_player(game, w, h);
 			if (game->map[h][w] == 'E' )
 				game->tot_exit++;
 			else if (game->map[h][w] == 'C' )
