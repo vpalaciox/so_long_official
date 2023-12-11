@@ -6,7 +6,7 @@
 /*   By: vpalacio <vanessajoypalacio@icloud.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 15:06:25 by vpalacio          #+#    #+#             */
-/*   Updated: 2023/12/07 18:50:30 by vpalacio         ###   ########.fr       */
+/*   Updated: 2023/12/11 16:22:15 by vpalacio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ void	check(t_game *game, int argc, char **argv);
 size_t	ft_strlen(const char *str);
 void	parse(t_game *game);
 void	execute(t_game *game);
-int		fai_cose(int keycode, t_game *ciao);
+int		move(int keycode, t_game *game);
 int		exit_x(void);
 void	draw_map(t_game *game);
 void	set_map(t_game *game, char *file_name);
@@ -74,4 +74,5 @@ void	check_cpe(t_game *game);
 void	clean_exit(t_game *game, char *msg);
 void	init(t_game *game);
 void	free_map(t_game *game);
+
 #endif

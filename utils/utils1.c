@@ -6,7 +6,7 @@
 /*   By: vpalacio <vanessajoypalacio@icloud.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/06 10:36:50 by vpalacio          #+#    #+#             */
-/*   Updated: 2023/12/06 10:58:21 by vpalacio         ###   ########.fr       */
+/*   Updated: 2023/12/11 16:10:13 by vpalacio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,16 +48,12 @@ int	inspect_wall(t_game *game)
 
 	i = game->width - 1;
 	j = 0;
-	// printf("game->map[6]%s\n", game->map[6]);
 	while (j < i)
 	{
 		if (game->map[0][j] != '1' || game->map[game->height - 1][j] != '1')
 		{
-			printf("ERROR HORIZONTAL\n");
-			// ("game->map[0][%d]:%c | game->map[game->height - 1:%d][j:%d]:%c\n", i, game->map[0][i], game->height - 1,j, game->map[game->height - 1][j]);
 			return (0);
 		}
-		// printf("game->map[0][%d]:%c | game->map[game->height - 1:%d][j:%d]:%c\n", i, game->map[0][i], game->height - 1,j, game->map[game->height - 1][j]);	
 		j++;
 	}
 	return (1);
@@ -74,7 +70,6 @@ int	check_vertical_wall(t_game *game)
 	{
 		if (!(game->map[h][0] == '1' && game->map[h][w - 1] == '1'))
 		{
-			printf("ERROR VERTICAL\n");
 			return (0);
 		}
 		h++;

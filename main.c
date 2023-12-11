@@ -6,7 +6,7 @@
 /*   By: vpalacio <vanessajoypalacio@icloud.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 15:15:52 by vpalacio          #+#    #+#             */
-/*   Updated: 2023/12/06 16:23:52 by vpalacio         ###   ########.fr       */
+/*   Updated: 2023/12/11 15:43:08 by vpalacio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@ int	main(int argc, char **argv)
 {
 	t_game	game;
 
-	//game.height = 0;
-	// game.width = 7;
 	check(&game, argc, argv);
 	parse(&game);
 	execute(&game);
